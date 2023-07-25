@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 dado.setImageResource(R.drawable.dice_1)
                 vec.text = "Intentos: 5"
                 ints = 5
-                if (winner == true){
+                if (winner){
                     mensaje.text = "Bien hecho! Otra vez?"
                 } else{
                     mensaje.text = "Tu puedes!"
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 ints -= 1
-                val texto = "Intentos: ${ints.toString()}"
+                val texto = "Intentos: $ints"
                 vec.text = texto
 
                 val men = "$numero"
@@ -122,17 +122,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun rand(from: Int, to: Int): Int {
+    private fun rand(from: Int, to: Int): Int {
         require(from <= to) {"Invalid range"}
         return Random.nextInt(from, to + 1)
     }
 
-    fun hasPoker(): Boolean{
+    private fun hasPoker(): Boolean{
         val ocurrencesMap = numeroslist.groupingBy { it }.eachCount()
         return ocurrencesMap.any{it.value >= 4}
     }
 
-    fun hasFull(): Boolean {
+    private fun hasFull(): Boolean {
         val occurrencesMap = numeroslist.groupingBy { it }.eachCount()
 
         val hasThreeOfAKind = occurrencesMap.containsValue(3)
@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    fun hasEscalera(): Boolean {
+    private fun hasEscalera(): Boolean {
         val sequence = numeroslist.joinToString("")
         val validSequences = setOf("123456", "234561", "345612", "456123", "561234", "612345")
         return validSequences.contains(sequence)
