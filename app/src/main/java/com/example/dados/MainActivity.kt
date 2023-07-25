@@ -137,7 +137,6 @@ class MainActivity : AppCompatActivity() {
 
             return valuesWithThreeOfAKind.size == 1 && valuesWithPair.size == 1
         }
-
         return false
     }
 
