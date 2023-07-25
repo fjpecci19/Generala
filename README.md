@@ -1,5 +1,6 @@
 # Generala
 Aplicación para jugar Generala
+
 Contiene las siguientes opciones ganadoras:
 Generala (Si los 5 dados dan el mismo número)
 Póker (Si 4 dados dan el mismo número)
