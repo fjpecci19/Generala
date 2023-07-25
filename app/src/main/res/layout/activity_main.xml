@@ -15,7 +15,7 @@
         android:layout_marginTop="75dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="60dp"
-        android:text="@string/generala"
+        android:text="@string/generala_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
