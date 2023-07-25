@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Generala</string>
+    <string name="default_message">Juguemos!</string>
+    <string name="boton_tirar">Tirar</string>
+    <string name="boton_tirar2">Tirar otra vez</string>
+    <string name="boton_reiniciar">Reiniciar</string>
+    <string name="boton_reiniciar2">Termina tu jugada</string>
+    <string name="ganaste">Ganaste!</string>
+    <string name="perdiste">Perdiste :(</string>
+    <string name="generala">Generala!</string>
+    <string name="poker">Póker!</string>
+    <string name="full">Full!</string>
+    <string name="escalera">Escalera!</string>
+    <string name="nada">Nada, otra vez?</string>
+    <string name="algo">Ganaste, otra vez?</string>
+    <string name="aliento">Tu puedes!</string>
+    <string name="intentos">Intentos: 5</string>
+    <string name="dice_image_description">Dado</string>
 </resources>

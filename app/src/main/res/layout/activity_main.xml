@@ -15,7 +15,7 @@
         android:layout_marginTop="75dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="60dp"
-        android:text="Generala"
+        android:text="@string/generala"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -31,10 +31,9 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="100dp"
-
         android:backgroundTint="@color/white"
         android:backgroundTintMode="add"
-        android:text="Tirar"
+        android:text="@string/boton_tirar"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/reset"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +50,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo"
-        app:srcCompat="@drawable/dice_1" />
+        app:srcCompat="@drawable/dice_1"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/dice_image_description"/>
 
     <Button
         android:id="@+id/reset"
@@ -63,7 +64,7 @@
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="@color/white"
-        android:text="Reiniciar"
+        android:text="@string/boton_reiniciar"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +74,7 @@
 
     <TextView
         android:id="@+id/sub"
-        android:text="Juguemos!"
+        android:text="@string/default_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -90,7 +91,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:text="Intentos: 5"
+        android:text="@string/intentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -104,21 +105,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/x"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="711dp"
-        android:text="X"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/titulo"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,29 +27,24 @@ class MainActivity : AppCompatActivity() {
         val vec: TextView = findViewById(R.id.textView)
         var ints = 5
         var winner = false
-        val exit: TextView = findViewById(R.id.x)
-
-        exit.setOnClickListener{
-            finish()
-        }
 
         reset.setOnClickListener {
             if (buttonPressCount == buttonMaxCount) {
                 buttonPressCount = 0
                 boton.isEnabled = true
-                boton.text = "Tirar"
+                boton.text = getString(R.string.boton_tirar)
                 numeroslist.clear()
                 dado.setImageResource(R.drawable.dice_1)
-                vec.text = "Intentos: 5"
+                vec.text = getString(R.string.intentos)
                 ints = 5
                 if (winner){
-                    mensaje.text = "Bien hecho! Otra vez?"
+                    mensaje.text = getString(R.string.algo)
                 } else{
-                    mensaje.text = "Tu puedes!"
+                    mensaje.text = getString(R.string.aliento)
                 }
             } else{
                 if (ints < 5) {
-                    reset.text = "Termina tu jugada"
+                    reset.text = getString(R.string.boton_reiniciar2)
                 }
             }
         }
@@ -73,12 +68,11 @@ class MainActivity : AppCompatActivity() {
                 val men = "$numero"
                 mensaje.text = men
 
-                val bot = "Tirar otra vez"
+                val bot = getString(R.string.boton_tirar2)
                 boton.text = bot
 
                 numeroslist.add(numero)
                 buttonPressCount ++
-
 
             }
 
@@ -86,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                 boton.isEnabled = false
                 val texto = numeroslist.joinToString(", ")
                 vec.text = texto
-                reset.text = "Reiniciar"
+                reset.text = getString(R.string.boton_reiniciar)
 
                 val first = numeroslist.first()
                 var c = 0
@@ -97,24 +91,24 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 if (c == numeroslist.size){
-                    mensaje.text = "Generala!"
-                    boton.text = "Ganaste!"
+                    mensaje.text = getString(R.string.generala)
+                    boton.text = getString(R.string.ganaste)
                     winner = true
                 } else if (hasPoker()) {
-                    mensaje.text = "Póker!"
-                    boton.text = "Ganaste!"
+                    mensaje.text = getString(R.string.poker)
+                    boton.text = getString(R.string.ganaste)
                     winner = true
                 } else if (hasFull()) {
-                    mensaje.text = "Full!"
-                    boton.text = "Ganaste!"
+                    mensaje.text = getString(R.string.full)
+                    boton.text = getString(R.string.ganaste)
                     winner = true
                 } else if (hasEscalera()){
-                    mensaje.text = "Escalera!"
-                    boton.text = "Ganaste!"
+                    mensaje.text = getString(R.string.escalera)
+                    boton.text = getString(R.string.ganaste)
                     winner = true
                 } else{
-                    mensaje.text = "Nada... Otra vez?"
-                    boton.text = "Perdiste!"
+                    mensaje.text = getString(R.string.nada)
+                    boton.text = getString(R.string.perdiste)
                     boton.isEnabled = false
                     winner = false
                 }
