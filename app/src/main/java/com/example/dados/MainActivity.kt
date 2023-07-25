@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         boton.setOnClickListener {
             if (buttonPressCount < buttonMaxCount) {
-                val numero = rand(1, 6)
+                val numero = rand()
                 when (numero) {
                     1 -> dado.setImageResource(R.drawable.dice_1)
                     2 -> dado.setImageResource(R.drawable.dice_2)
@@ -122,9 +122,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun rand(from: Int, to: Int): Int {
-        require(from <= to) {"Invalid range"}
-        return Random.nextInt(from, to + 1)
+    private fun rand(): Int {
+        return Random.nextInt(1, 7)
     }
 
     private fun hasPoker(): Boolean{
