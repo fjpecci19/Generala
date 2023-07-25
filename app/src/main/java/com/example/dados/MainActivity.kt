@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val vec: TextView = findViewById(R.id.textView)
         var ints = 5
         var winner = false
-        var exit: TextView = findViewById(R.id.x)
+        val exit: TextView = findViewById(R.id.x)
 
         exit.setOnClickListener{
             finish()
