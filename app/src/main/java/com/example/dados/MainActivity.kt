@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                     boton.text = getString(R.string.ganaste)
                     winner = true
                 } else{
-                    mensaje.text = getString(R.string.nada)
+                    mensaje.text = getString(R.string.algo)
                     boton.text = getString(R.string.perdiste)
                     boton.isEnabled = false
                     winner = false

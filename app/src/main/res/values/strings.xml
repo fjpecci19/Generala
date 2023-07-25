@@ -11,8 +11,7 @@
     <string name="poker">Póker!</string>
     <string name="full">Full!</string>
     <string name="escalera">Escalera!</string>
-    <string name="nada">Nada, otra vez?</string>
-    <string name="algo">Ganaste, otra vez?</string>
+    <string name="algo">Otra vez?</string>
     <string name="aliento">Tu puedes!</string>
     <string name="intentos">Intentos: 5</string>
     <string name="dice_image_description">Dado</string>
